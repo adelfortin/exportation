@@ -478,7 +478,7 @@ COLOR_LINE_1="GreenLine1"
 COLOR_LINE_2="GreenLine2"
 COLOR_LINE_3="GreenLine3"
 ;;
-violet)
+web1)
 COLOR_0="PurpleUser0"
 COLOR_1="PurpleUser1"
 COLOR_2="PurpleUser2"
@@ -488,7 +488,7 @@ COLOR_LINE_1="PurpleLine1"
 COLOR_LINE_2="PurpleLine2"
 COLOR_LINE_3="PurpleLine3"
 ;;
-rose)
+web2)
 COLOR_0="PinkUser0"
 COLOR_1="PinkUser1"
 COLOR_2="PinkUser2"
@@ -499,7 +499,7 @@ COLOR_LINE_2="PinkLine2"
 COLOR_LINE_3="PinkLine3"
 
 ;;
-orange)
+bdd)
 COLOR_0="OrangeUser0"
 COLOR_1="OrangeUser1"
 COLOR_2="OrangeUser2"
