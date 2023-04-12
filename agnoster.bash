@@ -136,14 +136,14 @@ fg_color() {
 		PurpleLine1) echo 38\;2\;174\;152\;183;;
 		PurpleLine2) echo 38\;2\;206\;191\;211;;
 		PurpleLine3) echo 38\;2\;233\;228\;235;;
-        RedUser0) echo 38\;2\;127\;0\;0;;
-        RedUser1) echo 38\;2\;178\;0\;0;;
-        RedUser2) echo 38\;2\;185\;25\;25;;
-        RedUser3) echo 38\;2\;201\;76\;76;;
-        RedLine0) echo 38\;255\;241\;236;;
-		RedLine1) echo 38\;255\;224\;221;;
-		RedLine2) echo 38\;255\;205\;205;;
-		RedLine3) echo 38\;255\;187\;187;;
+        RedUser0) echo 1\;38\;2\;127\;0\;0;;
+        RedUser1) echo 1\;38\;2\;178\;0\;0;;
+        RedUser2) echo 1\;38\;2\;185\;25\;25;;
+        RedUser3) echo 1\;38\;2\;201\;76\;76;;
+        RedLine0) echo 1\;38\;166\;124\;0;;
+		RedLine1) echo 1\;38\;191\;155\;48;;
+		RedLine2) echo 1\;38\;255\;191\;0;;
+		RedLine3) echo 1\;38\;255\;220\;115;;
         PinkUser0) echo 38\;2\;124\;0\;124;;
         PinkUser1) echo 38\;2\;178\;0\;178;;
         PinkUser2) echo 38\;2\;193\;50\;193;;
@@ -218,10 +218,10 @@ bg_color() {
         RedUser1) echo 48\;2\;178\;0\;0;;
         RedUser2) echo 48\;2\;185\;25\;25;;
         RedUser3) echo 48\;2\;201\;76\;76;;
-        RedLine0) echo 48\;255\;241\;236;;
-		RedLine1) echo 48\;255\;224\;221;;
-		RedLine2) echo 48\;255\;205\;205;;
-		RedLine3) echo 48\;255\;187\;187;;
+        RedLine0) echo 1\;48\;166\;124\;0;;
+		RedLine1) echo 1\;48\;191\;155\;48;;
+		RedLine2) echo 1\;48\;255\;191\;0;;
+		RedLine3) echo 1\;48\;255\;220\;115;;
         PinkUser0) echo 48\;2\;124\;0\;124;;
         PinkUser1) echo 48\;2\;178\;0\;178;;
         PinkUser2) echo 48\;2\;193\;50\;193;;
@@ -465,101 +465,111 @@ prompt_status() {
 
 change_colors() {
 # Get the result of whoami command and redirect output to /dev/null
-local user=$(hostname 2>/dev/null)
-
-case $user in
-vert)
-COLOR_0="GreenUser0"
-COLOR_1="GreenUser1"
-COLOR_2="GreenUser2"
-COLOR_3="GreenUser3"
-COLOR_LINE_0="GreenLine0"
-COLOR_LINE_1="GreenLine1"
-COLOR_LINE_2="GreenLine2"
-COLOR_LINE_3="GreenLine3"
-;;
-srvweb1)
-COLOR_0="PurpleUser0"
-COLOR_1="PurpleUser1"
-COLOR_2="PurpleUser2"
-COLOR_3="PurpleUser3"
-COLOR_LINE_0="PurpleLine0"
-COLOR_LINE_1="PurpleLine1"
-COLOR_LINE_2="PurpleLine2"
-COLOR_LINE_3="PurpleLine3"
-;;
-srvweb2)
-COLOR_0="PinkUser0"
-COLOR_1="PinkUser1"
-COLOR_2="PinkUser2"
-COLOR_3="PinkUser3"
-COLOR_LINE_0="PinkLine0"
-COLOR_LINE_1="PinkLine1"
-COLOR_LINE_2="PinkLine2"
-COLOR_LINE_3="PinkLine3"
-
-;;
-bdd)
-COLOR_0="OrangeUser0"
-COLOR_1="OrangeUser1"
-COLOR_2="OrangeUser2"
-COLOR_3="OrangeUser3"
-COLOR_LINE_0="OrangeLine0"
-COLOR_LINE_1="OrangeLine1"
-COLOR_LINE_2="OrangeLine2"
-COLOR_LINE_3="OrangeLine3"
-;;
-bleu)
-COLOR_0="BlueUser0"
-COLOR_1="BlueUser1"
-COLOR_2="BlueUser2"
-COLOR_3="BlueUser3"
-COLOR_LINE_0="BlueLine0"
-COLOR_LINE_1="BlueLine1"
-COLOR_LINE_2="BlueLine2"
-COLOR_LINE_3="BlueLine3"
-;;
-jaune)
-COLOR_0="YellowUser0"
-COLOR_1="YellowUser1"
-COLOR_2="YellowUser2"
-COLOR_3="YellowUser3"
-COLOR_LINE_0="YellowLine0"
-COLOR_LINE_1="YellowLine1"
-COLOR_LINE_2="YellowLine2"
-COLOR_LINE_3="YellowLine3"
-;;
-bleu)
-COLOR_0="BlueUser0"
-COLOR_1="BlueUser1"
-COLOR_2="BlueUser2"
-COLOR_3="BlueUser3"
-COLOR_LINE_0="BlueLine0"
-COLOR_LINE_1="BlueLine1"
-COLOR_LINE_2="BlueLine2"
-COLOR_LINE_3="BlueLine3"
-;;
-root)
-COLOR_0="RedUser0"
-COLOR_1="RedUser1"
-COLOR_2="RedUser2"
-COLOR_3="RedUser3"
-COLOR_LINE_0="RedLine0"
-COLOR_LINE_1="RedLine1"
-COLOR_LINE_2="RedLine2"
-COLOR_LINE_3="RedLine3"ay
-;;
-*)
-COLOR_0="GrayUser0"
-COLOR_1="GrayUser1"
-COLOR_2="GrayUser2"
-COLOR_3="GrayUser3"
-COLOR_LINE_0="GrayLine0"
-COLOR_LINE_1="GrayLine1"
-COLOR_LINE_2="GrayLine2"
-COLOR_LINE_3="GrayLine3"
-;;
-esac
+if [[ $(whoami 2>/dev/null) = "root" ]]; then
+	COLOR_0="RedUser0"
+	COLOR_1="RedUser1"
+	COLOR_2="RedUser2"
+	COLOR_3="RedUser3"
+	COLOR_LINE_0="RedLine0"
+	COLOR_LINE_1="RedLine1"
+	COLOR_LINE_2="RedLine2"
+	COLOR_LINE_3="RedLine3"
+else
+	local user=$(hostname 2>/dev/null)
+	
+	case $user in
+	admin)
+	COLOR_0="GreenUser0"
+	COLOR_1="GreenUser1"
+	COLOR_2="GreenUser2"
+	COLOR_3="GreenUser3"
+	COLOR_LINE_0="GreenLine0"
+	COLOR_LINE_1="GreenLine1"
+	COLOR_LINE_2="GreenLine2"
+	COLOR_LINE_3="GreenLine3"
+	;;
+	srvweb1)
+	COLOR_0="PurpleUser0"
+	COLOR_1="PurpleUser1"
+	COLOR_2="PurpleUser2"
+	COLOR_3="PurpleUser3"
+	COLOR_LINE_0="PurpleLine0"
+	COLOR_LINE_1="PurpleLine1"
+	COLOR_LINE_2="PurpleLine2"
+	COLOR_LINE_3="PurpleLine3"
+	;;
+	srvweb2)
+	COLOR_0="PinkUser0"
+	COLOR_1="PinkUser1"
+	COLOR_2="PinkUser2"
+	COLOR_3="PinkUser3"
+	COLOR_LINE_0="PinkLine0"
+	COLOR_LINE_1="PinkLine1"
+	COLOR_LINE_2="PinkLine2"
+	COLOR_LINE_3="PinkLine3"	
+	;;
+	bdd)
+	COLOR_0="OrangeUser0"
+	COLOR_1="OrangeUser1"
+	COLOR_2="OrangeUser2"
+	COLOR_3="OrangeUser3"
+	COLOR_LINE_0="OrangeLine0"
+	COLOR_LINE_1="OrangeLine1"
+	COLOR_LINE_2="OrangeLine2"
+	COLOR_LINE_3="OrangeLine3"
+	;;
+	client)
+	COLOR_0="BlueUser0"
+	COLOR_1="BlueUser1"
+	COLOR_2="BlueUser2"
+	COLOR_3="BlueUser3"
+	COLOR_LINE_0="BlueLine0"
+	COLOR_LINE_1="BlueLine1"
+	COLOR_LINE_2="BlueLine2"
+	COLOR_LINE_3="BlueLine3"
+	;;
+	routeur)
+	COLOR_0="YellowUser0"
+	COLOR_1="YellowUser1"
+	COLOR_2="YellowUser2"
+	COLOR_3="YellowUser3"
+	COLOR_LINE_0="YellowLine0"
+	COLOR_LINE_1="YellowLine1"
+	COLOR_LINE_2="YellowLine2"
+	COLOR_LINE_3="YellowLine3"
+	;;
+	bleu)
+	COLOR_0="BlueUser0"
+	COLOR_1="BlueUser1"
+	COLOR_2="BlueUser2"
+	COLOR_3="BlueUser3"
+	COLOR_LINE_0="BlueLine0"
+	COLOR_LINE_1="BlueLine1"
+	COLOR_LINE_2="BlueLine2"
+	COLOR_LINE_3="BlueLine3"
+	;;
+	root)
+	COLOR_0="RedUser0"
+	COLOR_1="RedUser1"
+	COLOR_2="RedUser2"
+	COLOR_3="RedUser3"
+	COLOR_LINE_0="RedLine0"
+	COLOR_LINE_1="RedLine1"
+	COLOR_LINE_2="RedLine2"
+	COLOR_LINE_3="RedLine3"
+	;;
+	*)
+	COLOR_0="GrayUser0"
+	COLOR_1="GrayUser1"
+	COLOR_2="GrayUser2"	
+	COLOR_3="GrayUser3"
+	COLOR_LINE_0="GrayLine0"
+	COLOR_LINE_1="GrayLine1"
+	COLOR_LINE_2="GrayLine2"
+	COLOR_LINE_3="GrayLine3"
+	;;
+	esac
+fi
 }
 
 ######################################################################
