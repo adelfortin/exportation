@@ -458,7 +458,7 @@ prompt_status() {
     symbols=()
     [[ $RETVAL -ne 0 ]] && symbols+="$(ansi_single $(fg_color red))✘"
     [[ $UID != 0 ]] && symbols+="$(ansi_single $(fg_color $COLOR_LINE_0))$"
-    [ $UID -eq 0 ]] && symbols+="$(ansi_single $(fg_color $COLOR_LINE_0))⚡"
+    [[ $UID -eq 0 ]] && symbols+="$(ansi_single $(fg_color $COLOR_LINE_0))⚡"
     [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="$(ansi_single $(fg_color cyan))⚙"
 
     [[ -n "$symbols" ]] && prompt_segment "$COLOR_0" "$COLOR_LINE_0" "$symbols"
@@ -695,14 +695,13 @@ build_prompt() {
     prompt_status
     #[[ -z ${AG_NO_HIST+x} ]] && prompt_histdt
     [[ -z ${AG_NO_CONTEXT+x} ]] && 
-    change_colors
 	prompt_virtualenv
 	prompt_host
-    prompt_context
-    prompt_dir
-    prompt_git
-    prompt_hg
-    prompt_end
+        prompt_context
+        prompt_dir
+        prompt_git
+        prompt_hg
+        prompt_end
 }
 
 # from orig...
