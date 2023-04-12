@@ -132,6 +132,8 @@ if [[ $UID != 0 ]]; then
     export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
 else
     export THEME=/root/.bash/themes/agnoster-bash/agnoster.bash
+fi
+
 if [[ -f $THEME ]]; then
     export DEFAULT_USER=`whoami`
     source $THEME
