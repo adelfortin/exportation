@@ -128,8 +128,10 @@ fi
 #if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 #    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 #fi
-
-export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
+if [[ $UID != 0 ]]; then
+    export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
+else
+    export THEME=/root/.bash/themes/agnoster-bash/agnoster.bash
 if [[ -f $THEME ]]; then
     export DEFAULT_USER=`whoami`
     source $THEME
