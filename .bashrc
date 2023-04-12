@@ -27,12 +27,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /opt/bin/lesspipe ] && eval "$(SHELL=/system/bin/sh lesspipe)"
 
-# Using color promt
-if [[ ${EUID} == 0 ]] ; then
-    PS1='\\[\033[38;5;255m\]\$ \[\033[48;2;0;135;175;38;2;221;75;57m\]\[\033[48;2;0;135;175;38;2;255;255;255m\] \h \[\033[48;2;83;85;85;38;2;0;135;175m\]\[\033[48;2;83;85;85;38;2;255;255;255m\] \w \[\033[49;38;2;83;85;85m\]\[\033[00m\] '
-else
-    PS1='\[\033[48;2;20;90;50;38;2;255;255;255m\] \$ \[\033[48;2;34;153;84;38;2;20;90;50m\]\[\033[48;2;34;153;84;38;2;250;250;250m\]  Adel  \033[48;2;125;206;160;38;2;34;153;84m\]\[\033[48;2;125;206;160;38;2;255;255;255m\] \w \[\033[49;38;2;125;206;160m\]\[\033[00m\] '
-fi
 # Some better definitions
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
