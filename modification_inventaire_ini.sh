@@ -9,6 +9,7 @@ declare -i I=0
 
 # Modification du fichier INVENTAIRE.INI avant de commencer la boucle
 echo -e "\n[machine_sans_configuration]" >> "$INVENTAIRE_INI"
+echo "machine0 ansible_host=127.0.0.1" >> "$INVENTAIRE_INI"
 
 # Boucle while pour lire chaque ligne du fichier ADRESSE_IPV4_LOG
 while read ligne
