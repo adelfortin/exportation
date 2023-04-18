@@ -120,6 +120,96 @@ fg_color() {
         cyan)        echo 36;;
         white)       echo 37;;
         orange)      echo 38\;5\;166;;
+	ForestGreenUser0)  echo 38\;2\;34\;49\;29;;
+        ForestGreenUser1)  echo 38\;2\;48\;69\;41;;		
+        ForestGreenUser2)  echo 38\;2\;55\;79\;47;;	
+        ForestGreenUser3)  echo 38\;2\;63\;90\;54;;
+	ForestGreenUser4)  echo 38\;2\;74\;103\;65;;
+		ForestGreenLine0)  echo 38\;2\;177\;201\;161;;
+		ForestGreenLine1)  echo 38\;2\;211\;221\;206;;
+		ForestGreenLine2)  echo 38\;2\;226\;222\;224;;
+		ForestGreenLine3)  echo 38\;2\;239\;238\;232;;
+		ForestGreenLine4)  echo 38\;2\;249\;248\;242;;
+	LimeGreenUser0)  echo 38\;2\;6\;59\;0;;
+        LimeGreenUser1)  echo 38\;2\;10\;93\;0;;		
+        LimeGreenUser2)  echo 38\;2\;8\;144\;0;;	
+        LimeGreenUser3)  echo 38\;2\;31\;198\;0;;
+	LimeGreenUser4)  echo 38\;2\;14\;255\;0;;
+		LimeGreenLine0)  echo 38\;2\;177\;201\;161;;
+		LimeGreenLine1)  echo 38\;2\;211\;221\;206;;
+		LimeGreenLine2)  echo 38\;2\;226\;222\;224;;
+		LimeGreenLine3)  echo 38\;2\;239\;238\;232;;
+		LimeGreenLine4)  echo 38\;2\;249\;248\;242;;
+	ArcDarkUser0)  echo 38\;2\;56\;60\;74;;
+        ArcDarkUser1)  echo 38\;2\;64\;69\;82;;		
+        ArcDarkUser2)  echo 38\;2\;75\;81\;98;;	
+        ArcDarkUser3)  echo 38\;2\;124\;129\;140;;
+	ArcDarkUser4)  echo 38\;2\;82\;148\;226;;
+		ArcDarkLine0)  echo 38\;2\;177\;201\;161;;
+		ArcDarkLine1)  echo 38\;2\;211\;221\;206;;
+		ArcDarkLine2)  echo 38\;2\;226\;222\;224;;
+		ArcDarkLine3)  echo 38\;2\;239\;238\;232;;
+		ArcDarkLine4)  echo 38\;2\;249\;248\;242;;
+	BeautifulBluesUser0)  echo 38\;2\;1\;31\;75;;
+        BeautifulBluesUser1)  echo 38\;2\;3\;57\;108;;		
+        BeautifulBluesUser2)  echo 38\;2\;0\;91\;150;;	
+        BeautifulBluesUser3)  echo 38\;2\;100\;151\;177;;
+	BeautifulBluesUser4)  echo 38\;2\;179\;205\;224;;
+		BeautifulBluesLine0)  echo 38\;2\;177\;201\;161;;
+		BeautifulBluesLine1)  echo 38\;2\;211\;221\;206;;
+		BeautifulBluesLine2)  echo 38\;2\;226\;222\;224;;
+		BeautifulBluesLine3)  echo 38\;2\;239\;238\;232;;
+		BeautifulBluesLine4)  echo 38\;2\;249\;248\;242;;
+	ShadesofTealUser0)  echo 38\;2\;0\;76\;76;;
+        ShadesofTealUser1)  echo 38\;2\;0\;102\;102;;		
+        ShadesofTealUser2)  echo 38\;2\;0\;128\;128;;	
+        ShadesofTealUser3)  echo 38\;2\;102\;178\;178;;
+	ShadesofTealUser4)  echo 38\;2\;178\;216\;216;;
+		ShadesofTealLine0)  echo 38\;2\;177\;201\;161;;
+		ShadesofTealLine1)  echo 38\;2\;211\;221\;206;;
+		ShadesofTealLine2)  echo 38\;2\;226\;222\;224;;
+		ShadesofTealLine3)  echo 38\;2\;239\;238\;232;;
+		ShadesofTealLine4)  echo 38\;2\;249\;248\;242;;
+	PrincessPinkUser0)  echo 38\;2\;255\;8\;74;;
+        PrincessPinkUser1)  echo 38\;2\;252\;52\;104;;		
+        PrincessPinkUser2)  echo 38\;2\;255\;98\;137;;	
+        PrincessPinkUser3)  echo 38\;2\;255\;147;\;172;;
+	PrincessPinkUser4)  echo 38\;2\;255\;194\;205;;
+		PrincessPinkLine0)  echo 38\;2\;177\;201\;161;;
+		PrincessPinkLine1)  echo 38\;2\;211\;221\;206;;
+		PrincessPinkLine2)  echo 38\;2\;226\;222\;224;;
+		PrincessPinkLine3)  echo 38\;2\;239\;238\;232;;
+		PrincessPinkLine4)  echo 38\;2\;249\;248\;242;;
+	SkinAndLipsUser0)  echo 38\;2\;227\;93\;106;;
+        SkinAndLipsUser1)  echo 38\;2\;201\;130\;118;;		
+        SkinAndLipsUser2)  echo 38\;2\;210\;153\;133;;	
+        SkinAndLipsUser3)  echo 38\;2\;219\;172;\;152;;
+	SkinAndLipsUser4)  echo 38\;2\;238\;193\;173;;
+		SkinAndLipsLine0)  echo 38\;2\;177\;201\;161;;
+		SkinAndLipsLine1)  echo 38\;2\;211\;221\;206;;
+		SkinAndLipsLine2)  echo 38\;2\;226\;222\;224;;
+		SkinAndLipsLine3)  echo 38\;2\;239\;238\;232;;
+		SkinAndLipsLine4)  echo 38\;2\;249\;248\;242;;
+	DarkSkinTonesUser0)  echo 38\;2\;111\;79\;29;;
+        DarkSkinTonesUser1)  echo 38\;2\;124\;80\;26;;		
+        DarkSkinTonesUser2)  echo 38\;2\;135\;97\;39;;	
+        DarkSkinTonesUser3)  echo 38\;2\;146\;106;\;45;;
+	DarkSkinTonesUser4)  echo 38\;2\;156\;114\;72;;
+		DarkSkinTonesLine0)  echo 38\;2\;177\;201\;161;;
+		DarkSkinTonesLine1)  echo 38\;2\;211\;221\;206;;
+		DarkSkinTonesLine2)  echo 38\;2\;226\;222\;224;;
+		DarkSkinTonesLine3)  echo 38\;2\;239\;238\;232;;
+		DarkSkinTonesLine4)  echo 38\;2\;249\;248\;242;;
+	BeautifulBrownUser0)  echo 38\;2\;131\;80\;46;;
+        BeautifulBrownUser1)  echo 38\;2\;150\;97\;61;;		
+        BeautifulBrownUser2)  echo 38\;2\;189\;126\;74;;	
+        BeautifulBrownUser3)  echo 38\;2\;206\;139;\;84;;
+	BeautifulBrownUser4)  echo 38\;2\;210\;165\;109;;
+		BeautifulBrownLine0)  echo 38\;2\;177\;201\;161;;
+		BeautifulBrownLine1)  echo 38\;2\;211\;221\;206;;
+		BeautifulBrownLine2)  echo 38\;2\;226\;222\;224;;
+		BeautifulBrownLine3)  echo 38\;2\;239\;238\;232;;
+		BeautifulBrownLine4)  echo 38\;2\;249\;248\;242;;
         GreenUser0)  echo 38\;2\;6\;27\;15;;
         GreenUser1)  echo 38\;2\;20\;90\;50;;		
         GreenUser2)  echo 38\;2\;34\;153\;84;;	
@@ -479,7 +569,7 @@ else
 	local user=$(hostname 2>/dev/null)
 	
 	case $user in
-	admin)
+	supervision)
 	COLOR_0="GreenUser0"
 	COLOR_1="GreenUser1"
 	COLOR_2="GreenUser2"
@@ -489,7 +579,7 @@ else
 	COLOR_LINE_2="GreenLine2"
 	COLOR_LINE_3="GreenLine3"
 	;;
-	srvweb1)
+	webserver1)
 	COLOR_0="PurpleUser0"
 	COLOR_1="PurpleUser1"
 	COLOR_2="PurpleUser2"
@@ -499,7 +589,7 @@ else
 	COLOR_LINE_2="PurpleLine2"
 	COLOR_LINE_3="PurpleLine3"
 	;;
-	srvweb2)
+	webserver2)
 	COLOR_0="PinkUser0"
 	COLOR_1="PinkUser1"
 	COLOR_2="PinkUser2"
@@ -509,7 +599,7 @@ else
 	COLOR_LINE_2="PinkLine2"
 	COLOR_LINE_3="PinkLine3"	
 	;;
-	bdd)
+	dbserver1)
 	COLOR_0="OrangeUser0"
 	COLOR_1="OrangeUser1"
 	COLOR_2="OrangeUser2"
@@ -518,6 +608,16 @@ else
 	COLOR_LINE_1="OrangeLine1"
 	COLOR_LINE_2="OrangeLine2"
 	COLOR_LINE_3="OrangeLine3"
+	;;
+	dbserver2)
+	COLOR_0="YellowUser0"
+	COLOR_1="YellowUser1"
+	COLOR_2="YellowUser2"
+	COLOR_3="YellowUser3"
+	COLOR_LINE_0="YellowLine0"
+	COLOR_LINE_1="YellowLine1"
+	COLOR_LINE_2="YellowLine2"
+	COLOR_LINE_3="YellowLine3"
 	;;
 	client)
 	COLOR_0="BlueUser0"
@@ -529,17 +629,7 @@ else
 	COLOR_LINE_2="BlueLine2"
 	COLOR_LINE_3="BlueLine3"
 	;;
-	routeur)
-	COLOR_0="YellowUser0"
-	COLOR_1="YellowUser1"
-	COLOR_2="YellowUser2"
-	COLOR_3="YellowUser3"
-	COLOR_LINE_0="YellowLine0"
-	COLOR_LINE_1="YellowLine1"
-	COLOR_LINE_2="YellowLine2"
-	COLOR_LINE_3="YellowLine3"
-	;;
-	bleu)
+	haproxyserver)
 	COLOR_0="BlueUser0"
 	COLOR_1="BlueUser1"
 	COLOR_2="BlueUser2"
