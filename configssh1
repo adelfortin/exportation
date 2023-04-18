@@ -3,13 +3,22 @@ Hostname 192.168.83.1
 User supervision
 Port 22
 
+Host routeur
+Hostname 192.168.84.1
+User client
+Port 22
+
+Host admin
+Hostname 192.168.84.3
+User admin
+Port 22
 
 Host client
 Hostname 192.168.84.6
 User client
 Port 22
 
-Host routeur
+Host haproxy
 Hostname 192.168.82.1
 User haproxyserver
 Port 22
@@ -18,7 +27,6 @@ Host bdd1
 Hostname 192.168.82.4
 User dbserver1
 Port 22
-
 
 Host bdd2
 Hostname 192.168.82.5
