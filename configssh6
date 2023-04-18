@@ -24,6 +24,11 @@ Hostname 192.168.84.1
 User routeur
 Port 22
 
+Host admin
+Hostname 192.168.84.3
+User admin
+Port 22
+
 Host bdd1
 Hostname 192.168.82.4
 User dbserver1
@@ -56,4 +61,3 @@ port 22
 ForwardAgent yes
 ProxyJump root@192.168.84.1
 LocalForward 2242 localhost:22
-
