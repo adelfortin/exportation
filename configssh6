@@ -1,3 +1,11 @@
+Host haproxy
+Hostname 192.168.83.2
+User haproxyserver
+Port 22
+ForwardAgent yes
+ProxyJump root@192.168.84.1
+LocalForward 2242 localhost:22
+
 Host supervision
 Hostname 192.168.83.1
 User supervision
@@ -9,12 +17,11 @@ LocalForward 2242 localhost:22
 Host client
 Hostname 192.168.84.6
 User client
-ForwardAgent yes
 Port 22
 
 Host routeur
 Hostname 192.168.84.1
-User haproxyserver
+User routeur
 Port 22
 
 Host bdd1
