@@ -17,11 +17,13 @@
 UTILISATEUR="haproxyserver"
 IPV4_1="192.168.82.1/24"
 IPV4_2="192.168.83.2/24"
-IPV4_3="192.168.84.1/24"
-INTERFACE_1="enp0s3"
-INTERFACE_2="enp0s8"
-INTERFACE_3="enp0s9"
-INTERFACE_4="enp0s10"
+IPV4_3="192.168.84.2/24"
+INTERFACE_1="enp0s8"
+INTERFACE_2="enp0s9"
+INTERFACE_3="enp0s10"
+DNS_1="10.156.32.33"
+DNS_2="10.154.59.104"
+PASSERELLE_1="192.168.84.1"
 SUDOERS_FILE=/etc/sudoers
 BACKUP_FILE=/etc/sudoers.bak
 
@@ -34,7 +36,7 @@ exit 1
 fi
 
 # Création de la première connexion
-if nmcli connection add type ethernet con-name INTERNET ifname $INTERFACE_1 ipv4.method auto ; then
+if nmcli connection add type ethernet con-name réseau82 ifname $INTERFACE_1 ipv4.adresses $IPV4_1 ipv4.method manual ; then
 	echo "La première connexion a été correctement créée."
 else
 	echo "Erreur : Impossible de créer la première connexion." >&2
@@ -42,7 +44,7 @@ exit 1
 fi
 
 # Création de la seconde connexion
-if nmcli connection add type ethernet con-name réseau82 ifname $INTERFACE_2 ipv4.adresses $IPV4_1 ipv4.method manual ; then
+if nmcli connection add type ethernet con-name réseau82 ifname $INTERFACE_2 ipv4.adresses $IPV4_2 ipv4.method manual ; then
 	echo "La seconde connexion a été correctement créée."
 else
 	echo "Erreur : Impossible de créer la seconde connexion." >&2
@@ -50,18 +52,10 @@ exit 1
 fi
 
 # Création de la troisième connexion
-if nmcli connection add type ethernet con-name réseau83 ifname $INTERFACE_3 ipv4.adresses $IPV4_2 ipv4.method manual ; then
+if nmcli connection add type ethernet con-name réseau84 ifname $INTERFACE_3 ipv4.adresses $IPV4_3 ipv4.gateway $PASSERELLE_1 ipv4.dns "$DNS_1 $DNS_2" ipv4.method manual; then
 	echo "La troisième connexion a été correctement créée."
 else
 	echo "Erreur : Impossible de créer la troisième connexion." >&2
-exit 1
-fi
-
-# Création de la quatrième connexion
-if nmcli connection add type ethernet con-name réseau84 ifname $INTERFACE_4 ipv4.adresses $IPV4_3 ipv4.method manual ; then
-	echo "La quatrième connexion a été correctement créée."
-else
-	echo "Erreur : Impossible de créer la quatrième connexion." >&2
 exit 1
 fi
 
