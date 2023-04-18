@@ -15,6 +15,22 @@ ProxyJump root@192.168.82.1
 LocalForward 2243 localhost:22
 
 Host routeur
+Hostname 192.168.84.1
+User routeur
+ForwardAgent yes
+Port 22
+ProxyJump root@192.168.82.1
+LocalForward 2243 localhost:22
+
+Host admin
+Hostname 192.168.84.3
+User admin
+ForwardAgent yes
+Port 22
+ProxyJump root@192.168.82.1
+LocalForward 2243 localhost:22
+
+Host haproxy
 Hostname 192.168.82.1
 User haproxyserver
 Port 22
