@@ -35,19 +35,12 @@ Port 22
 Host bdd1
 Hostname 192.168.82.4
 User dbserver1
-ForwardAgent yes
 Port 22
-ProxyJump root@192.168.83.2
-LocalForward 2243 localhost:22
-
 
 Host bdd2
 Hostname 192.168.82.5
 User dbserver2
-ForwardAgent yes
 Port 22
-ProxyJump root@192.168.83.2
-LocalForward 2243 localhost:22
 
 HOST web1
 Hostname 192.168.83.3
@@ -57,7 +50,4 @@ Port 22
 HOST web2
 Hostname 192.168.82.3
 User webserver2
-ForwardAgent yes
 Port 22
-ProxyJump root@192.168.83.2
-LocalForward 2243 localhost:22
